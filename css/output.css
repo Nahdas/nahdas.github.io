@@ -1,0 +1,565 @@
+/*IMPORT DES TYPOS*/
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro:200|Source+Sans+Pro:400|Source+Sans+Pro:600');
+
+@font-face {
+    font-family: 'aveny_tbold';
+    src: url('https://media.lesechos.fr/infographie/font/avenyt-bold-webfont.woff2') format('woff2'),
+         url('https://media.lesechos.fr/infographie/font/avenyt-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'aveny_tmedium';
+    src: url('https://media.lesechos.fr/infographie/font/avenyt-medium-webfont.woff2') format('woff2'),
+         url('https://media.lesechos.fr/infographie/font/avenyt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lacrima_serifregular';
+    src: url('https://media.lesechos.fr/infographie/font/lacrimaserif-webfont.woff2') format('woff2'),
+         url('https://media.lesechos.fr/infographie/font/lacrimaserif-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: snow;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+article img {
+	width: 100%;
+}
+
+.conteneur {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+.conteneur img {
+	display: block;
+    margin: 1.5em 0 0;
+}
+
+.imageMedium {
+    margin: 1.5em auto 0;
+}
+
+.imageFullWindow {
+	position: relative;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: center;
+}
+
+@media screen and (max-width: 2600px) {
+    .conteneur {
+		width: 30%;
+	}
+
+	.conteneur.large {
+		width: 60%;
+	}
+
+	.imageMedium {
+		width: 70%;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+    .conteneur {
+		width: 40%;
+	}
+
+	.conteneur.large {
+		width: 70%;
+	}
+
+	.imageMedium {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    .conteneur {
+		width: 60%;
+	}
+
+	.conteneur.large {
+		width: 80%;
+	}
+
+	.imageMedium {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+    .conteneur {
+		width: 90%;
+	}
+
+	.conteneur.large {
+		width: 90%;
+	}
+
+	.imageMedium {
+		width: 90%;
+	}
+}
+
+
+
+/*LE CACHE DE CHARGEMENT*/
+
+.cache{
+    background: rgba(10,10,10,1);
+    position: fixed;
+    top: 0
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+}
+
+#wrapper_cache{
+    padding-top: 38vh;
+}
+
+#phrase_preload{
+    font-family: lacrima_serifregular;
+    color: snow;
+    font-size: 2em;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.logo_preload{
+    opacity: 0.7;
+    width: 180px;
+    display: block;
+    margin: auto;
+}
+
+.logo_intro{
+    opacity: 0.7;
+    width: 180px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid grey; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    margin-top: 2%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/*INTRODUCTION*/
+
+
+#intro{
+    width: 100%;
+    height: 100vh;
+}
+
+#titraille{
+    width: 100%;
+    height: 100vh;
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
+    /*background: rgba(205,23,23,0.85);*/
+    background: rgba(255,255,255,0.7);
+    z-index: 999;
+    display:table;
+	background: repeating-linear-gradient(
+		45deg,
+		snow,
+		snow 5px,
+		#F2F2F2 5px,
+		#F2F2F2 10px
+    );
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#wrapper_titraille{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+#bloc_titre{
+    background: rgba(255,255,255,0.9);
+    display: block;
+    width: 50%;
+    max-width: 600px;
+    margin: auto;
+    border: 4px solid black;
+    padding: 25px;
+}
+
+#wrapper_titraille img{
+    display: block;
+    margin: auto;
+	margin-top: 8px;
+    max-width: 150px;
+}
+
+h1 {
+    font-family: aveny_tbold;
+    font-size: 4em;
+    line-height: 0.95em;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-family: aveny_tmedium;
+    font-size: 2.5em;
+    line-height: 0.95em;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+#chapeau {
+    font-family: lacrima_serifregular;
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+}
+
+
+#noms_intro {
+    color: black;
+    font-size: 1.1em;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    max-width: 50%
+}
+
+
+
+
+
+
+#bandeau_echos {
+    background: rgba(255,255,255,0.85);
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: none;
+}
+
+#timer {
+    background: #D61D17;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    z-index: 999999;
+    transtion: all 0.3s;
+}
+
+#logobandeau {
+    max-height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.logo_social {
+    max-height: 18px;
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+/*LIENS*/
+.paragraphe a, .step a {
+    text-decoration: none;
+    color: #D61D17;
+    font-weight: bold;
+    transition: all 0.2s;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom,
+                          transparent,
+                          transparent 50%,
+                          #D61D17 50%,
+                          #D61D17);
+    transition: background-position 0.2s;
+}
+
+.paragraphe a:hover{
+    color: white;
+    background-position: 0% 100%;
+    cursor: pointer;
+}
+
+.caption {
+    color: grey;
+    font-size: 1em;
+    padding: 0.5em 0 1em 0;
+	margin: 0;
+}
+
+.captionFullWindow {
+    position: absolute;
+	color: white;
+	font-size: 1em;
+    background-color: rgba(1, 1, 1, 0.5);
+    top: 1em;
+    left: 1em;
+	margin: 0;
+    padding: 0.5em;
+}
+
+.flourish-embed{
+    width: 60%;
+	margin: 0 auto;
+}
+
+
+/*TEXTES*/
+
+h3 {
+	font-family: aveny_tmedium;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p.paragraphe{
+	text-align: left;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	margin-top: 25px;
+}
+
+p.premier_paragraphe{
+    margin-top: 100px
+}
+
+p.dernier_paragraphe{
+	margin-bottom: 100px
+}
+
+
+
+
+
+
+
+
+
+
+/*PREVIOUSLY ON LOST*/
+
+#previously{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    height: auto;
+    background: rgba(0,0,0,0.85);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#wrapper_previously{
+    width: 94%;
+    margin: auto;
+    position: relative;
+    height: auto;
+    /*background: snow;*/
+}
+
+.previously_item{
+    width: 30%;
+    position: relative;
+    margin-right: 5%;
+    background: rgba(0,0,0,0.9);
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.previously_item:hover{
+    opacity: 0.8;
+}
+
+.previously_item:nth-child(4){margin-right: 0!important;}
+
+.texte_previously_item{
+    font-family: lacrima_serifregular;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.titre_previously_item{
+    font-family: aveny_tmedium;
+    color: rgba(255,255,255,0.9);
+    font-weight: 1.2em;
+    line-height: 1em;
+    font-size: 2em;
+    margin: 0;
+    margin-top: 12px;
+    font-weight: 400!important;
+    text-align: center;
+}
+
+#previously_retrouvez{
+    margin-top: 15px!important;
+    margin-bottom: 30px;
+    font-family: lacrima_serifregular;
+    color: rgba(255,255,255,0.5);
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+}
+
+.image_previously_item{
+    max-width: 100%;
+}
+
+img.vertical{
+    margin-top: 8px!important;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #previously{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        height: auto;
+        background: rgba(0,0,0,0.85);
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    #wrapper_previously{
+        width: 94%;
+        margin: auto;
+        position: relative;
+        height: auto;
+        /*background: snow;*/
+    }
+
+    .previously_item{
+        width: 100%;
+        position: relative;
+        margin-right: 5%;
+        background: rgba(0,0,0,0.9);
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.25s;
+        margin-bottom: 5%;
+    }
+
+    .previously_item:hover{
+        opacity: 0.8;
+    }
+
+    .previously_item:nth-child(4){margin-right: 0!important;}
+
+    .texte_previously_item{
+        font-family: lacrima_serifregular;
+        color: rgba(255,255,255,0.75);
+        text-align: center;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .titre_previously_item{
+        font-family: aveny_tmedium;
+        color: rgba(255,255,255,0.9);
+        font-weight: 1.2em;
+        line-height: 1em;
+        margin: 0;
+        margin-top: 20px;
+        font-weight: 400!important;
+        text-align: center;
+    }
+
+    #previously_retrouvez{
+        margin-top: 15px!important;
+        margin-bottom: 30px;
+        font-family: lacrima_serifregular;
+        color: rgba(255,255,255,0.5);
+        font-weight: 2em;
+        line-height: 1em;
+        text-align: center;
+    }
+
+    .image_previously_item{
+        max-width: 100%;
+    }
+
+}
+
+/*VERSION MOBILE ET ORDI PORTABLE*/
+
+@media screen and (max-width: 1200px) {
+    #chapeau{
+        font-family: lacrima_serifregular;
+        font-size: 1.2em;
+        margin-top: 35px;
+        max-width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    h1{
+        font-size: 3.5em;
+    }
+}
