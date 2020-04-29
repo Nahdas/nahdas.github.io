@@ -48,7 +48,8 @@ body {
 }
 
 article img {
-	width: 100%;
+    width: 100%;
+    image-orientation: from-image;
 }
 
 article video {
