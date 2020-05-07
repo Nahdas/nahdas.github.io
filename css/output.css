@@ -119,6 +119,30 @@ article video {
 	background-position: center;
 }
 
+.banner__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -12;
+  }
+
+  .small_video {
+    position: relative;
+    left: -35%;
+  }
+
+  .infog{
+    width: 153%;
+    position: relative;
+    left: -17%;
+  }
+
+
 @media screen and (max-width: 2600px) {
     .conteneur {
 		width: 50%;
@@ -164,7 +188,19 @@ article video {
 
 @media screen and (max-width: 500px) {
 
-	.conteneur.large {
+    .infog{
+        width: 100%;
+        left: 0%;
+    }
+
+    .small_video{
+        left: -10%;
+        width: 115%;
+    }
+
+
+    
+	.conteneur{
 		width: 90%;
 	}
 
@@ -642,25 +678,3 @@ img.vertical{
 }
 
 
-.banner__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    min-width: 100%;
-    height: auto;
-    min-height: 100%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -12;
-  }
-
-  .small_video {
-    position: relative;
-    left: -35%;
-  }
-
-  .infog{
-    width: 153%;
-    position: relative;
-    left: -17%;
-  }
